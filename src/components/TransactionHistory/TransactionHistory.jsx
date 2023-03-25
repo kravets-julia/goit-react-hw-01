@@ -5,24 +5,24 @@ import css from 'components/TransactionHistory/TransactionHistory.module.css'
 export const TransactionHistory = ({items}) => {
     return (
         <table className={css.history}>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
-    </tr>
-  </thead>
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Currency</th>
+              </tr>
+            </thead>
 
-  <tbody >
-    {items.map(item => (
-         <tr key={item.id}>
-            <Transaction item={item} />
-         </tr>
-            ))}
-  </tbody>
-</table>
-    )
-}
+            <tbody >
+              {items.map(item => (
+                  <tr key={item.id}>
+                      <Transaction item={item} />
+                  </tr>
+                      ))}
+            </tbody>
+          </table>
+              )
+          }
 
 TransactionHistory.propTypes = {
   items: PropTypes.arrayOf(
